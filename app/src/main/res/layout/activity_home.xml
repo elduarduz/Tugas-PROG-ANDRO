@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#71bc78"
-    tools:context=".home">
+    tools:context=".HOME">
 
     <Button
         android:id="@+id/button"
@@ -17,7 +17,7 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="130dp"
+        android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="130dp"
         android:onClick="ChangeFragment"
@@ -27,8 +27,7 @@
         android:id="@+id/button3"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="250dp"
         android:onClick="ChangeFragment"
         android:text="Settings" />
 
@@ -37,26 +36,8 @@
         android:id="@+id/fragment_place"
         android:layout_width="match_parent"
         android:layout_height="670dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
         />
-<!--    <fragment-->
-<!--        android:name="com.example.helloworld.CHAT"-->
-<!--        android:id="@+id/fragment_place2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="670dp"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:layout_marginRight="10dp"-->
-<!--        />-->
-<!--    <fragment-->
-<!--        android:name="com.example.helloworld.SETTINGS"-->
-<!--        android:id="@+id/fragment_place3"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="670dp"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:layout_marginRight="10dp"-->
-<!--        />-->
 </RelativeLayout>
