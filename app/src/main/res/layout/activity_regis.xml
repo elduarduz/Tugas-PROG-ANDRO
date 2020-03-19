@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#71bc78"
-    tools:context=".regis">
+    tools:context=".REGIS">
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,4 +14,68 @@
         android:textSize="30dp"
         android:layout_centerHorizontal="true"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan"
+        android:textSize="25dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="120dp"
+        />
+
+    <EditText
+        android:id="@+id/rEmail"
+        android:inputType="textEmailAddress"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:hint=" Username/ Email"
+        android:background="#ffffff"
+        android:layout_marginTop="160dp"
+        />
+
+    <EditText
+        android:id="@+id/rPassword"
+        android:inputType="textPassword"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:hint=" Password"
+        android:background="#ffffff"
+        android:layout_marginTop="220dp"
+        />
+
+    <EditText
+        android:id="@+id/rconPassword"
+        android:inputType="textPassword"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:hint=" Konfirmasi Password"
+        android:background="#ffffff"
+        android:layout_marginTop="280dp"
+        />
+
+    <Button
+        android:id="@+id/rButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="340dp"
+        android:layout_weight="1"
+        android:text="regis"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="55dp"
+        />
+
+    <TextView
+        android:id="@+id/rgoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="udah punya akun?"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="400dp"/>
+
 </RelativeLayout>

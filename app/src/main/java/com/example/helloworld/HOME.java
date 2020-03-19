@@ -3,6 +3,7 @@ package com.example.helloworld;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,12 +14,22 @@ import android.app.FragmentManager;
 
 
 
-public class home extends AppCompatActivity {
+public class HOME extends AppCompatActivity {
+
+    SharedPreferences pref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        pref = getApplicationContext().getSharedPreferences("Mypref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+
+        editor.putString("KEY1", "Test Shared Preference");
+        editor.commit();
+
+
     }
 
     public void ChangeFragment(View view){
