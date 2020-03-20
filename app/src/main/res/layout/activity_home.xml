@@ -35,9 +35,18 @@
         android:name="com.example.helloworld.PROFILE"
         android:id="@+id/fragment_place"
         android:layout_width="match_parent"
-        android:layout_height="670dp"
+        android:layout_height="500dp"
         android:layout_marginTop="42dp"
         android:layout_marginLeft="13dp"
         android:layout_marginRight="13dp"
         />
+
+    <Button
+        android:id="@+id/tombols"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="250dp"
+        android:text="TOMBOL TOAST"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </RelativeLayout>
