@@ -66,6 +66,12 @@ public class HOME extends AppCompatActivity {
             FragmentTransaction ft = fm.beginTransaction();
             ft.replace(R.id.fragment_place, fragment);
             ft.commit();
+        } else if (view == findViewById(R.id.button4)) {
+            fragment = new judul_filmbioskop();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.fragment_place, fragment);
+            ft.commit();
         }
     }
 
