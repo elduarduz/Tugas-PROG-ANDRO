@@ -1,3 +1,5 @@
+package com.example.helloworld;
+
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
