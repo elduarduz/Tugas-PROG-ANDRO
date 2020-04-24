@@ -1,51 +1,47 @@
 package com.example.helloworld;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class camera extends AppCompatActivity {
+
+public class CameraFragment extends Fragment {
 
     public static final int MY_PERMISSIONS_REQUEST_CAMERA = 100;
     public static final String ALLOW_KEY = "ALLOWED";
     public static final String CAMERA_PREF = "settingsPreference";
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater,
-//                             ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.camera_fragment, container, false);
-//        return view;
-//    }
-//
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.activity_camera, container, false);
+    @Override
+    public View onCreateView(LayoutInflater inflater,
+                             ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_camera, container, false);
         return view;
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
-}
     public static Boolean getFromPref(Context context, String key) {
         SharedPreferences myPrefs = context.getSharedPreferences(CAMERA_PREF,
                 Context.MODE_PRIVATE);
         return (myPrefs.getBoolean(key, false));
     }
-
     private void checkCameraHardware() {
         AlertDialog alertDialog = new AlertDialog.Builder(requireActivity()).create();
         alertDialog.setTitle("Alert");
@@ -128,14 +124,18 @@ public class camera extends AppCompatActivity {
                                     });
                             alertDialog.show();
                         } else if (!showRationale) {
-                            SharedPreferences myPrefs = contex.getSharedPreferences(CAMERA_PREF,
+                            SharedPreferences myPrefs = getContext().getSharedPreferences(CAMERA_PREF,
                                     Context.MODE_PRIVATE);
                             SharedPreferences.Editor prefsEditor = myPrefs.edit();
-                            prefsEditor.putBoolean(key, allowed);
+                            prefsEditor.putBoolean("key", true);
                             prefsEditor.commit();
                         }
                     }
                 }
             }
         }
+    }
+}
+
+
 
